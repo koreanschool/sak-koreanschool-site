@@ -1,13 +1,39 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.jumbotron {
+	position: relative;
+	overflow: hidden;
+}
+
+.jumbotron .container {
+	position: relative;
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 2rem;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
+}
+
+.jumbotron-background {
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	background-size: cover;
+}
+
+.spacer {
+	margin-top: 15px;
 }
