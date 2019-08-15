@@ -17,7 +17,7 @@ export const NavigationBar = () => {
 			<Collapse isOpen={open} navbar>
 				<Nav className="ml-auto" navbar>
 					{NavigationBarRoutes.map(route => (
-						<NavLink href={route.link}>{route.name}</NavLink>
+						<NavLink key={route.name} href={route.link}>{route.name}</NavLink>
 					))}
 				</Nav>
 			</Collapse>
