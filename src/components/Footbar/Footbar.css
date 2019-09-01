@@ -1,0 +1,9 @@
+.footbar {
+	font-size: 13px;
+	color: gray;
+}
+
+.footbar-container {
+	width: 66%;
+	margin: auto;
+}

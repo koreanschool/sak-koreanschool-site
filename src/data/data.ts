@@ -13,5 +13,8 @@ export default {
 		BRAND_EN: "St. Andrew Kim Korean School",
 		HOME_EN: "Home",
 		REGISTER_EN: "Register"
+	},
+	FOOTBAR: {
+		FOOTBAR_COPYRIGHT: "© 2019 - St. Andrew Kim Korean School"
 	}
 }
