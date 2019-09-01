@@ -17,5 +17,7 @@ export const Register = () => {
 
 	}
 
+	const formItems = {
 
+	}
 }
