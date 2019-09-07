@@ -1,4 +1,6 @@
 import React from 'react';
+import firebase from 'firebase/app';
+
 import { Form, Button, ButtonGroup, Container } from 'react-bootstrap';
 import writeToDatabase from './writeToDatabase';
 import useValidation from './useValidation';
@@ -10,7 +12,7 @@ const Finish = ({ steps, registrations, studentList }) => {
 
 	const [validated, setValidated] = useValidation();
 
-	const loggedIn = false; // TODO: change this to check for firebase.auth.currentuser
+	const loggedIn = firebase.auth().currentUser;
 
 	const handleSubmit = async event => {
 		event.preventDefault();
@@ -21,7 +23,7 @@ const Finish = ({ steps, registrations, studentList }) => {
 		} else {
 			setValidated(false);
 			await writeToDatabase(registration, students, loggedIn);
-			window.location.href = "/";
+			window.location.href = "/confirmation";
 		}
 	};
 

@@ -1,8 +1,7 @@
 import React from 'react';
-import { Button } from 'reactstrap';
 import bannerImage from '../../assets/home/banner.jpg';
 import data from '../../data/data';
-import './Home.css';
+import { Button } from 'reactstrap';
 
 const {
 	BANNER_ALT_EN,
@@ -15,8 +14,8 @@ const {
 	REGISTER_KR
 } = data.HOME;
 
-export const Home = () => {
-	return (
+export const ParentHome = (user) => {
+    return (
 		<>
 			<div className="jumbotron jumbotron-fluid bg-dark text-center">
 				<div className="jumbotron-background">
@@ -26,11 +25,6 @@ export const Home = () => {
 					<h1>{MAIN_TEXT_EN}</h1>
 					<h2>{MAIN_TEXT_KR}</h2>
 					<div className="spacer"></div>
-					<p>{SEMESTER_KR} | {SEMESTER_EN}</p>
-					<p>{NOW_ACCEPTING_REGISTRATIONS_EN}</p>
-					<Button color="primary" href="/register">
-						{REGISTER_KR} | {REGISTER_EN}
-					</Button>
 				</div>
 			</div>
 		</>

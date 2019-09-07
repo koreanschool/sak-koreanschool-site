@@ -4,19 +4,26 @@ import Step2 from './Step2';
 import Finish from './Finish';
 import useSteps from './useSteps';
 import useRegistration from './useRegistration';
-
+import data from '../../data/data';
 import { Container } from 'react-bootstrap';
 import useStudents from './useStudents';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+const {
+	SEMESTER_EN,
+	SEMESTER_KR,
+} = data.HOME;
 
 const Register = () => {
 	const { step, addCurrentStep, backCurrentStep } = useSteps();
 	const { registration, setRegistration } = useRegistration();
 	const { students, setStudents } = useStudents();
-
+	
+	console.log(firebase.auth.currentUser);
 	return (
 		<Container style={{ marginTop: '50px' }}>
 			<h1>Registration</h1>
-			<h4>2019</h4>
+			<h4>{data.HOME.SEMESTER_KR} | {data.HOME.SEMESTER_EN}</h4>
 			<br></br>
 			<Container style={{ backgroundColor: '#eee', borderRadius: '7px', padding: '20px' }}>
 				{
